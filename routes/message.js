@@ -3,9 +3,6 @@ const router = express.Router();
 const config = require('../config/config');
 const API = require('wechat-api');
 const wechat = require('wechat');
-const rawBody = require('raw-body');
-const tpl = require('../util/tpl');
-const wexinReply = require('../wechat/reply')
 const api = new API(config.appid, config.appsecret);
 const app = express();
 
@@ -32,16 +29,6 @@ router.get('/getToken', function (req, res) {
 		res.send(token);
 	});
 });
-
-router.post('/', async (ctx) => {
-	//通过raw-body模块接收接口传过来的xml数据
-	var data = await rawBody(ctx.req, {length: ctx.length, limit: '1mb', encoding: ctx.charset});
-	console.log(data);
-	ctx.status = 200;
-	ctx.type = 'application/xml';
-	ctx.body = '';
-})
-
 module.exports = router;
 
 

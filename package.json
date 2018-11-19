@@ -13,6 +13,7 @@
     "morgan": "~1.9.0",
     "pug": "2.0.0-beta11",
     "qiniu": "^7.2.1",
+    "raw-body": "^2.3.3",
     "wechat": "^2.1.0",
     "wechat-api": "^1.35.1"
   }
