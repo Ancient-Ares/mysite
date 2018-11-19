@@ -4,8 +4,6 @@ const config = require('../config/config');
 const API = require('wechat-api');
 const wechat = require('wechat');
 const rawBody = require('raw-body');
-const tpl = require('../util/tpl');
-const wexinReply = require('../wechat/reply')
 const api = new API(config.appid, config.appsecret);
 const app = express();
 
