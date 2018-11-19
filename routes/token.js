@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var appID = 'wx7b56fa9456d5c29e';
-var appSecret = '19395028b82d2413613c3bb7cf1505fe';
+var appSecret = 'fd144eaee98fb05f73e9b538f56a5f06';
 var token = 'afjgs007wechatToken';
 var API = require('wechat-api');
 var api = new API(appID,appSecret);
